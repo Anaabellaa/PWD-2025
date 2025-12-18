@@ -50,7 +50,10 @@ if (session_status() === PHP_SESSION_NONE) {
             <li><a href="cartelera.php">Cartelera</a></li>
             <li><a href="abm_ld.php">Libros</a></li>
             <li><a class="nav-link" href="cartelera.php?cat=Ayuda">Ayuda</a></li>
-            <li><a href="prestamos_activos.php">Préstamos</a></li>
+            <li><a href="registrar_prestamo.php">Préstamos</a></li>
+            <li><a href="registrar_devolucion.php">Devoluciones</a></li>
+            <li><a href="prestamos_activos.php">Tabla de préstamos</a></li>
+
 
             <?php if (isset($_SESSION['username']) && $_SESSION['rol']=='administrador'): ?>
                 <li><a href="abm_p.php">Usuarios</a></li>
