@@ -14,7 +14,7 @@ $resultado = mysqli_query($con, "SELECT * FROM libros_d WHERE formato = 'impreso
         body { font-family: Arial, sans-serif; background-color: #f7f7f7; padding: 20px; }
         table { width: 100%; border-collapse: collapse; background-color: white; }
         th, td { padding: 10px; border: 1px solid #ccc; text-align: left; }
-        th { background-color: #333; color: white; }
+        th { background-color: #222222ff; color: white; }
         .disponible { color: green; font-weight: bold; }
         .prestado { color: red; font-weight: bold; }
         .botones { margin-top: 20px; }
@@ -23,6 +23,8 @@ $resultado = mysqli_query($con, "SELECT * FROM libros_d WHERE formato = 'impreso
     </style>
 </head>
 <body>
+    
+<?php include("menu_bs.php"); ?>
 
     <h2>Libros Impresos</h2>
 
@@ -46,12 +48,6 @@ $resultado = mysqli_query($con, "SELECT * FROM libros_d WHERE formato = 'impreso
             </tr>
         <?php endwhile; ?>
     </table>
-
-    <div class="botones">
-        <a href="registrar_prestamo.php" class="boton">Registrar Préstamo</a>
-        <a href="registrar_devolucion.php" class="boton">Registrar Devolución</a>
-        <a href="index.php" class="btn btn-default">Ir al Menú Principal</a>
-    </div>
 
 
 </body>
